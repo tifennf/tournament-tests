@@ -28,7 +28,9 @@ async fn main() {
     for n in 0..64 {
         let player = Player {
             league_name: n.to_string(),
-            discord_name: "test#4".to_string(),
+            discord_name: "test".to_string(),
+            tag: 4,
+            discord_id: 11,
         };
 
         let request = reqwest::Client::new()
@@ -59,6 +61,8 @@ async fn main() {
 struct Player {
     league_name: String,
     discord_name: String,
+    tag: u16,
+    discord_id: usize,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
