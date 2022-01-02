@@ -30,7 +30,7 @@ async fn main() {
 
         let player = Player {
             league_name: n_str.clone(),
-            discord_name: "test".to_string(),
+            discord_username: "test".to_string(),
             tag: 4,
             discord_id: n_str,
         };
@@ -62,7 +62,7 @@ async fn main() {
 #[derive(Debug, Serialize, Deserialize)]
 struct Player {
     league_name: String,
-    discord_name: String,
+    discord_username: String,
     tag: u16,
     discord_id: String,
 }
