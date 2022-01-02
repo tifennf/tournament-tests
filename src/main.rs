@@ -26,11 +26,13 @@ async fn main() {
     let mut error_list = Vec::new();
 
     for n in 0..64 {
+        let n_str = n.to_string();
+
         let player = Player {
-            league_name: n.to_string(),
+            league_name: n_str.clone(),
             discord_name: "test".to_string(),
             tag: 4,
-            discord_id: n,
+            discord_id: n_str,
         };
 
         let request = reqwest::Client::new()
@@ -62,7 +64,7 @@ struct Player {
     league_name: String,
     discord_name: String,
     tag: u16,
-    discord_id: usize,
+    discord_id: String,
 }
 
 #[derive(Debug, Serialize, Deserialize)]
