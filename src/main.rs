@@ -30,7 +30,7 @@ async fn main() {
             league_name: n.to_string(),
             discord_name: "test".to_string(),
             tag: 4,
-            discord_id: 11,
+            discord_id: n,
         };
 
         let request = reqwest::Client::new()
